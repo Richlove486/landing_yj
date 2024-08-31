@@ -1,2 +1,95 @@
 @charset "UTF-8";
 
+:root {
+    --black: #000;
+    --white: #fff;
+    --desc01: #010d3e;
+    --neutral900: #999;
+    --neutral800: #808080;
+    --neutral700: #7b7b7b;
+    --neutral400: #bcbcbc;
+    --neutral200: #eff0f6;
+    --neutral100: #f1f1f1;
+    --neutral50: #eaeefe;
+}
+
+/* 컴포넌트 */
+.container {
+    max-width: 120rem;
+    padding: 0 2rem;
+    margin: 0 auto;
+}
+
+/* 로고 */
+.logo {
+    width: 4rem;
+    height: 4rem;
+    position: relative;
+    z-index: 0;
+
+    &::after {
+        content: '';
+        width: 4rem;
+        height: 3.3rem;
+        position: absolute;
+        top: 0.6rem;
+        left: 0;
+        background: linear-gradient(to right, #f87bff 0%, #fb92cf 24%, #ffdd9b 48%, #c2f0b1 73%, #2fd8fe 100%);
+        z-index: -1;
+        filter: blur(0.6rem);
+    }
+}
+
+/* 헤더 */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    background: var(--neutral50);
+
+    .menu_web {
+        display: flex;
+        gap: 2.4rem;
+
+        @media screen and (max-width: 500px) {
+            display: none;
+        }
+
+        .menu_list {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 1.6rem;
+
+            li {
+                opacity: 0.6;
+
+                a {
+                    font-size: 1.6rem;
+                    line-height: 2.3rem;
+                    letter-spacing: -0.01em;
+                }
+            }
+        }
+    }
+
+    .menu_mo {
+        display: none;
+
+        @media screen and (max-width: 500px) {
+            display: block;
+        }
+    }
+}
+
+/* Call to Action */
+.cta {
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+    background: var(--black);
+    color: var(--white);
+    font-size: 1.6rem;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+}
