@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'DM Sans';
+    font-display: swap;
+    src: url('../fonts/DM_Sans/DMSans-VariableFont_opsz,wght.ttf');
+}
+@font-face {
+    font-family: 'Inter';
+    font-display: swap;
+    src: url('../fonts/Inter/Inter-VariableFont_opsz,wght.ttf');
+}
+
+html {
+    font-size: 10px;
+    font-family: 'DM Sans', 'Inter', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Apple Color Emoji',
+        'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+    color: #000;
+    line-height: 1.4;
+    word-break: keep-all;
+}
+body {
+    font-size: 1rem;
+}
+* {
+    font-family: 'DM Sans', 'Inter', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Apple Color Emoji',
+        'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+}
