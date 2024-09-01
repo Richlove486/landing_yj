@@ -35,6 +35,22 @@ h2,
 
 h3,
 .h3 {
+    font-family: 'DM Sans';
+
+    font-size: 5.4rem;
+    font-weight: 700;
+    line-height: 6rem;
+    letter-spacing: -0.06rem;
+    background-image: linear-gradient(to bottom, #000, #001354);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+
+    @media screen and (max-width: 500px) {
+        font-size: 3.2rem;
+        line-height: 3.2rem;
+        letter-spacing: -0.01rem;
+    }
 }
 
 /* 컴포넌트 */
@@ -48,6 +64,14 @@ h3,
     @media screen and (max-width: 500px) {
         display: none;
     }
+}
+
+.section03,
+.section04,
+.section05,
+.section06,
+.section07 {
+    padding: 8rem 0;
 }
 
 /* 로고 */
@@ -144,6 +168,9 @@ h3,
     flex-direction: column;
     gap: 2rem;
 
+    align-items: center;
+    text-align: center;
+
     .badge {
         padding: 0.6rem 1.3rem;
         border-radius: 1rem;
@@ -185,6 +212,8 @@ h3,
     .title {
         gap: 3rem;
         padding-top: 10rem;
+        text-align: left;
+        align-items: flex-start;
 
         @media screen and (max-width: 500px) {
             padding-top: 3rem;
@@ -326,5 +355,92 @@ h3,
     }
     100% {
         transform: translateX(-100%);
+    }
+}
+
+/* 섹션03 - 프로덕트*/
+.section03 {
+    background: linear-gradient(to bottom, #fff 40%, #d2dcff 100%);
+    overflow: hidden;
+
+    .section03_inner {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+    }
+
+    .section03_img {
+        position: relative;
+
+        .section03_img_product {
+            filter: drop-shadow(0px 4px 70px rgba(0, 0, 0, 0.25));
+        }
+
+        .section03_img01 {
+            position: absolute;
+            bottom: 4.4rem;
+            left: -13.8rem;
+        }
+        .section03_img02 {
+            position: absolute;
+            top: 9.8rem;
+            right: -18.5rem;
+        }
+        @media screen and (max-width: 768px) {
+            .section03_img01 {
+                left: -12rem;
+            }
+
+            .section03_img02 {
+                right: -14.4rem;
+                bottom: 0;
+                top: -9.8rem;
+            }
+        }
+
+        @media screen and (max-width: 500px) {
+            .section03_img01,
+            .section03_img02 {
+                display: none;
+            }
+        }
+    }
+
+    .section03_grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+
+        .section03_grid_item {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: flex-start;
+            padding: 4rem 0;
+
+            p {
+                font-family: 'DM sans';
+                font-size: 1.8rem;
+                font-weight: 700;
+                letter-spacing: -0.031rem;
+            }
+
+            span {
+                font-size: 1.6rem;
+                line-height: 2.3rem;
+                letter-spacing: -0.01rem;
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .section03_grid {
+            grid-template-columns: repeat(2, 26rem);
+            justify-content: center;
+        }
+    }
+    @media screen and (max-width: 500px) {
+        .section03_grid {
+            grid-template-columns: repeat(1, 26rem);
+        }
     }
 }
