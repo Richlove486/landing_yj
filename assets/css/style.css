@@ -178,8 +178,7 @@ h3,
     overflow-x: clip;
 
     @media screen and (max-width: 500px) {
-        height: 100vh;
-        height: 100dvh;
+        height: auto;
         padding-bottom: 3rem;
     }
 
@@ -256,10 +255,76 @@ h3,
             bottom: -4.1rem;
             right: -4.1rem;
             transform: rotate(30deg);
+            z-index: 1;
 
             @media screen and (max-width: 1024px) {
                 display: none;
             }
         }
+    }
+}
+
+/* 섹션02 - 로고 */
+.section02 {
+    overflow: hidden;
+    position: relative;
+    height: 13.2rem;
+
+    .marquee {
+        display: flex;
+        padding: 5rem 8.8rem;
+        position: relative;
+        width: 120rem;
+        overflow: hidden;
+
+        @media screen and (max-width: 768px) {
+            padding: 5rem 0;
+            position: absolute;
+            left: 0;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, #ffffff 0%, #ffffff00 50%, #ffffff 100%);
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .marquee::after {
+            width: 100vw;
+        }
+    }
+
+    .marquee_inner {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        gap: 2.8rem;
+
+        animation: anim01 40s linear infinite;
+
+        &:last-child {
+            margin-left: 2.8rem;
+        }
+        li {
+            width: 20rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+@keyframes anim01 {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
     }
 }
