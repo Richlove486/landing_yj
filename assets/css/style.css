@@ -717,3 +717,58 @@ h3,
         column-count: 1;
     }
 }
+
+/* 섹션07 - sign up */
+.section07 {
+    background: linear-gradient(to bottom, #fff 0%, #d2dcff 100%);
+    overflow: hidden;
+}
+.section07_inner {
+    position: relative;
+    padding: 8rem 0;
+}
+
+.section07_inner .title p {
+    font-size: 1.6rem;
+    line-height: 2.3rem;
+    letter-spacing: -0.001rem;
+}
+
+.section07_img01 {
+    position: absolute;
+    top: -8rem;
+    left: -2rem;
+    width: 36.2rem;
+    height: 36.2rem;
+}
+.section07_img02 {
+    position: absolute;
+    top: 3rem;
+    right: 0;
+    width: 36.2rem;
+    height: 36.2rem;
+}
+
+@media screen and (max-width: 1024px) {
+    .section07 {
+        padding: 4rem 0;
+    }
+    .section07_img01 {
+        top: 0rem;
+        left: -19.6rem;
+    }
+    .section07_img02 {
+        top: unset;
+        bottom: 0;
+        right: -22rem;
+    }
+}
+@media screen and (max-width: 500px) {
+    .section07 {
+        padding: 0;
+    }
+    .section07_img01,
+    .section07_img02 {
+        display: none;
+    }
+}
