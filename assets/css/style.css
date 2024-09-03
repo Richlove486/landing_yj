@@ -633,3 +633,87 @@ h3,
         width: 100%;
     }
 }
+
+/* 섹션06 - 사용후기 */
+.section06 {
+    overflow: hidden;
+}
+.user {
+    position: relative;
+    width: 101.6rem;
+    margin: 4rem auto 0;
+}
+.user::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom, #fff 0%, #ffffff00 30%, #ffffff00 100%);
+}
+
+.user .user_list {
+    column-count: 3;
+    column-gap: 2rem;
+}
+.user .user_list .user_list_item {
+    background: var(--white);
+    border: 1px solid var(--neutral50);
+    border-radius: 2rem;
+    padding: 4rem;
+    box-shadow: 0px 7px 14px #eaeaea;
+    margin-bottom: 2.4rem;
+}
+.user .user_list .user_list_item:last-child {
+    margin-bottom: 0;
+}
+.user .user_list .user_list_item span {
+    font-size: 1.6rem;
+    line-height: 2.3rem;
+    letter-spacing: -0.001rem;
+}
+.user .user_list .user_list_item .user_profile {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.8rem;
+    margin-top: 2rem;
+}
+.user .user_list .user_list_item .user_profile .user_profile_img {
+    width: 4.2rem;
+    height: 4.2rem;
+    border-radius: 100rem;
+    overflow: hidden;
+}
+.user .user_list .user_list_item .user_profile .user_name {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.user .user_list .user_list_item .user_profile .user_name b {
+    font-size: 1.6rem;
+    font-weight: 500;
+    letter-spacing: -0.002rem;
+}
+
+@media screen and (max-width: 768px) {
+    .user {
+        left: -50%;
+        transform: translateX(25%);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .user {
+        left: 0;
+        transform: translateX(0);
+        width: calc(100% - 4rem);
+    }
+    .user::after {
+        content: none;
+    }
+    .user .user_list {
+        column-count: 1;
+    }
+}
