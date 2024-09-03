@@ -528,7 +528,7 @@ h3,
         font-family: 'DM sans';
         font-size: 1.8rem;
         font-weight: 700;
-        color: var(--neutral900);
+        color: var(--neutral700);
     }
 }
 
@@ -602,6 +602,9 @@ h3,
 
 .price .price_item.bk {
     background: var(--black);
+}
+.price .price_item.bk span {
+    color: var(--neutral900);
 }
 .price .price_item.bk .price_item_button {
     background: var(--white);
