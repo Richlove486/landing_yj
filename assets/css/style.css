@@ -26,8 +26,11 @@ h2,
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
+}
 
-    @media screen and (max-width: 500px) {
+@media screen and (max-width: 500px) {
+    h2,
+    .h2 {
         font-size: 4.8rem;
         letter-spacing: -0.025rem;
     }
@@ -45,8 +48,10 @@ h3,
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-
-    @media screen and (max-width: 500px) {
+}
+@media screen and (max-width: 500px) {
+    h3,
+    .h3 {
         font-size: 3.2rem;
         line-height: 3.2rem;
         letter-spacing: -0.01rem;
@@ -60,8 +65,8 @@ h3,
     margin: 0 auto;
 }
 
-.break_mo {
-    @media screen and (max-width: 500px) {
+@media screen and (max-width: 500px) {
+    .break_mo {
         display: none;
     }
 }
@@ -80,18 +85,17 @@ h3,
     height: 4rem;
     position: relative;
     z-index: 0;
-
-    &::after {
-        content: '';
-        width: 4rem;
-        height: 3.3rem;
-        position: absolute;
-        top: 0.6rem;
-        left: 0;
-        background: linear-gradient(to right, #f87bff 0%, #fb92cf 24%, #ffdd9b 48%, #c2f0b1 73%, #2fd8fe 100%);
-        z-index: -1;
-        filter: blur(0.6rem);
-    }
+}
+.logo::after {
+    content: '';
+    width: 4rem;
+    height: 3.3rem;
+    position: absolute;
+    top: 0.6rem;
+    left: 0;
+    background: linear-gradient(to right, #f87bff 0%, #fb92cf 24%, #ffdd9b 48%, #c2f0b1 73%, #2fd8fe 100%);
+    z-index: -1;
+    filter: blur(0.6rem);
 }
 
 /* 헤더 */
@@ -105,10 +109,6 @@ h3,
     .menu_web {
         display: flex;
         gap: 2.4rem;
-
-        @media screen and (max-width: 500px) {
-            display: none;
-        }
 
         .menu_list {
             display: flex;
@@ -128,10 +128,17 @@ h3,
         }
     }
 
+    @media screen and (max-width: 500px) {
+        .menu_web {
+            display: none;
+        }
+    }
+
     .menu_mo {
         display: none;
-
-        @media screen and (max-width: 500px) {
+    }
+    @media screen and (max-width: 500px) {
+        .menu_mo {
             display: block;
         }
     }
