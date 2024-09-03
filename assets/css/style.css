@@ -445,8 +445,7 @@ h3,
 }
 
 /* 섹션04 - 매니지먼트 */
-.section04 {
-}
+
 .section04_content {
     margin-top: 4rem;
 }
@@ -617,4 +616,20 @@ h3,
 }
 .price .price_item.bk .price_item_desc li::before {
     background: url(../images/ico_check_wt24.svg) no-repeat center center;
+}
+
+@media screen and (max-width: 768px) {
+    .price {
+        flex-direction: column;
+        align-items: center;
+    }
+    .price .price_item {
+        width: 39rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .price .price_item {
+        width: 100%;
+    }
 }
